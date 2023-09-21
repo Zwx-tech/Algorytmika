@@ -6,7 +6,7 @@ def decToAny(n: int, b: int) -> int:
     """
     response = ""
     while n > 0:
-        d = n%b
+        d = n % b
         response += str(d) if d < 10 else chr(ord('A') + d - 10)
         n //= b
     response = response[::-1]
@@ -14,5 +14,6 @@ def decToAny(n: int, b: int) -> int:
 
 
 if __name__ == "__main__":
-    n = [15, 12, 2, 4, 7, 8]
-    print(decToAny(255, 16))
+    n = [255, 256, 20, 40, 70, 80]
+    for i in n:
+        print(decToAny(i, 16))
